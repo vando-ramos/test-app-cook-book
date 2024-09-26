@@ -1,0 +1,12 @@
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li>
+      <%= link_to recipe_path(recipe) do %>
+        <strong><%= recipe.name %> - <%= recipe.recipe_type.name %></strong>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<div><%= link_to 'Nova Receita', new_recipe_path %></div>
+<div><%= link_to 'Novo Tipo de Receita', new_recipe_type_path %></div>

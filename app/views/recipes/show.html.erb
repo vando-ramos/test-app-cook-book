@@ -1,0 +1,16 @@
+<h1><%= @recipe.name %></h1>
+
+<h3>Cozinha</h3>
+<%= @recipe.cuisine %>
+
+<h3>Ingredientes</h3>
+<%= @recipe.ingredients %>
+
+<h3>Modo de preparo</h3>
+<%= @recipe.cook_method %>
+
+<h3>Tempo de preparo</h3>
+<%= @recipe.cook_time %> min
+
+<div><%= link_to 'Editar', edit_recipe_path(@recipe) %></div>
+<div><%= button_to 'Deletar', @recipe, method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja deletar esta receita?" } } %></div>

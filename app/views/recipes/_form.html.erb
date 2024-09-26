@@ -1,0 +1,29 @@
+<%= form_with model: @recipe do |f| %>
+  <div>
+    <%= f.label :name, 'Nome' %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :recipe_type, 'Tipo de Receita' %>
+    <%= f.collection_select :recipe_type_id, RecipeType.all, :id, :name %>
+  </div>
+  <div>
+    <%= f.label :cuisine, 'Cozinha' %>
+    <%= f.text_field :cuisine %>
+  </div>
+  <div>
+    <%= f.label :ingredients, 'Ingredientes' %>
+    <%= f.text_area :ingredients %>
+  </div>
+  <div>
+    <%= f.label :cook_method, 'Modo de preparo' %>
+    <%= f.text_area :cook_method %>
+  </div>
+  <div>
+    <%= f.label :cook_time, 'Tempo de preparo' %>
+    <%= f.number_field :cook_time %>
+  </div>
+  <div>
+    <%= f.submit 'Enviar' %>
+  </div>
+<% end %>
