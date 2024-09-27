@@ -1,11 +1,3 @@
-<h1>Novo tipo de receita</h1>
+<h2>Nova Categoria</h2>
 
-<%= form_with model: @recipe_type do |f| %>
-  <div>
-    <%= f.label :name, 'Tipo de receita' %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.submit 'Enviar' %>
-  </div>
-<% end %>
+<%= render 'form' %>

@@ -1,0 +1,11 @@
+.edit {
+  margin: 20px 0;
+  border: 1px solid black;
+  width: 57px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.edit a {
+  padding: 3px 5px;
+}

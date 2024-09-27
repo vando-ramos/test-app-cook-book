@@ -1,0 +1,4 @@
+<h2><%= @recipe_type.name %></h2>
+
+<div class='edit'><%= link_to 'Editar', edit_recipe_type_path(@recipe_type) %></div>
+<div class='delete'><%= button_to 'Deletar', @recipe_type, method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja deletar esta categoria?" } } %></div>

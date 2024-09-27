@@ -13,10 +13,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
 
     if @recipe.save
-      redirect_to @recipe, notice: 'Receita criada com sucesso!'
+      redirect_to @recipe, notice: 'Receita cadastrada com sucesso!'
     else
-      flash.now[:notice] = 'Não foi possível criar receita!'
-      render :new
+      flash.now.notice = 'Não foi possível cadastrar receita!'
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -29,7 +29,7 @@ class RecipesController < ApplicationController
       redirect_to @recipe, notice: 'Receita atualizada com sucesso!'
     else
       flash.now.notice = 'Não foi possível atualizar receita!'
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 

@@ -1,4 +1,4 @@
-<h1><%= @recipe.name %></h1>
+<h2><%= @recipe.name %></h2>
 
 <h3>Cozinha</h3>
 <%= @recipe.cuisine %>
@@ -12,5 +12,5 @@
 <h3>Tempo de preparo</h3>
 <%= @recipe.cook_time %> min
 
-<div><%= link_to 'Editar', edit_recipe_path(@recipe) %></div>
-<div><%= button_to 'Deletar', @recipe, method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja deletar esta receita?" } } %></div>
+<div class='edit'><%= link_to 'Editar', edit_recipe_path(@recipe) %></div>
+<div class='delete'><%= button_to 'Deletar', @recipe, method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja deletar esta receita?" } } %></div>

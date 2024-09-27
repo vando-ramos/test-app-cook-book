@@ -4,7 +4,7 @@
     <%= f.text_field :name %>
   </div>
   <div>
-    <%= f.label :recipe_type, 'Tipo de Receita' %>
+    <%= f.label :recipe_type, 'Categoria' %>
     <%= f.collection_select :recipe_type_id, RecipeType.all, :id, :name %>
   </div>
   <div>
@@ -24,6 +24,6 @@
     <%= f.number_field :cook_time %>
   </div>
   <div>
-    <%= f.submit 'Enviar' %>
+    <%= f.submit 'Enviar Receita' %>
   </div>
 <% end %>
